@@ -25,19 +25,6 @@ export default function Home() {
           </button>
         </div>
 
-        
-        <div className="bg-gray-800 p-8 rounded-lg">
-          <h2 className="text-2xl font-semibold mb-4">
-            US House Price Index
-          </h2>
-          <p>
-          The US House Price Index, as provided by the Federal Housing Finance Agency, measures changes in prices for residential houses, natural disasters can have have a toll on the change in house prices.
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a href="/impact/house_price_index">Learn More</a>
-          </button>
-        </div>
-
         <div className="bg-gray-800 p-8 rounded-lg">
           <h2 className="text-2xl font-semibold mb-4">
             Average Homeowners Insurance
