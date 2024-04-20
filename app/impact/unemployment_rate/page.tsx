@@ -38,9 +38,16 @@ const Unemployment: React.FC = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Unemployment</h1>
-            <canvas ref={canvasRef} id="myChart" width="600" ></canvas>
+        <div className="flex justify-center items-center h-screen">
+            <div className="text-center">
+                <h1 className="text-6xl font-bold mb-8" style={{ fontFamily: 'Futura' }}>Unemployment</h1>
+                <div className="flex justify-center">
+                    <canvas ref={canvasRef} id="myChart" width="600"></canvas>
+                </div>
+                <div className="bg-gray-800 p-8 rounded-lg" style={{ width: '600px' }}>
+                    <p style={{ fontFamily: 'Futura' }} className="text-center">As represented by the chart, unemployment rates for Louisiana doubled in 2005, the time directly after Hurricane Katrina. When the number of people currently receiving income deteriorates, so does the number of people who can buy a home or pay off their mortgage.</p>
+                </div>
+            </div>
         </div>
     );
 
