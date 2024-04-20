@@ -2,8 +2,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold mb-8">Natural Disasters and the Housing Market</h1>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24" style={{ fontFamily: "Poppins, Arial, sans-serif" }}>
+      <h1 className="text-4xl font-bold mb-8">
+        Natural Disasters and the Housing Market
+      </h1>
       
       <p className="text-lg mb-8">
         Welcome to our website! Here, we explore the relationship between natural disasters and the housing market. 
@@ -12,15 +14,23 @@ export default function Home() {
       
       <div className="grid grid-cols-2 gap-8">
         <div className="bg-gray-800 p-8 rounded-lg">
-          <h2 className="text-2xl font-semibold mb-4">Impact on Property Values</h2>
+          <h2 className="text-2xl font-semibold mb-4">
+            Impact on Property Values
+          </h2>
           <p>
             Natural disasters can have a significant impact on property values. 
             Properties located in areas prone to frequent disasters may experience lower market values and higher insurance costs.
           </p>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href="/impact/property_values">Learn More</a>
+          </button>
         </div>
+
         
         <div className="bg-gray-800 p-8 rounded-lg">
-          <h2 className="text-2xl font-semibold mb-4">Housing Demand</h2>
+          <h2 className="text-2xl font-semibold mb-4">
+            Housing Demand
+          </h2>
           <p>
             The occurrence of natural disasters can affect housing demand in affected areas. 
             Some homebuyers may be hesitant to purchase properties in disaster-prone regions, leading to a decrease in demand.
@@ -29,7 +39,9 @@ export default function Home() {
       </div>
       
       <div className="mt-8">
-        <h2 className="text-2xl font-semibold mb-4">Explore Further</h2>
+        <h2 className="text-2xl font-semibold mb-4">
+          Explore Further
+        </h2>
         <p>
           If you're interested in learning more about the relationship between natural disasters and the housing market, 
           check out our resources section for in-depth articles, research papers, and case studies.
