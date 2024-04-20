@@ -15,11 +15,11 @@ export default function Home() {
       <div className="grid grid-cols-2 gap-8">
         <div className="bg-gray-800 p-8 rounded-lg">
           <h2 className="text-2xl font-semibold mb-4">
-            Impact on Property Values
+            Impact on Interest Rates
           </h2>
           <p>
-            Natural disasters can have a significant impact on property values. 
-            Properties located in areas prone to frequent disasters may experience lower market values and higher insurance costs.
+            Natural disasters can have a significant impact on interst rates. 
+            Properties located in areas prone to frequent disasters may experience changes in interest rates.
           </p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             <a href="/impact/interest_rate">Learn More</a>
@@ -29,11 +29,11 @@ export default function Home() {
         
         <div className="bg-gray-800 p-8 rounded-lg">
           <h2 className="text-2xl font-semibold mb-4">
-            Housing Demand
+            Housing Pricing
           </h2>
           <p>
-            The occurrence of natural disasters can affect housing demand in affected areas. 
-            Some homebuyers may be hesitant to purchase properties in disaster-prone regions, leading to a decrease in demand.
+            The occurrence of natural disasters can affect housing price changes in affected areas. 
+            Some homebuyers may be hesitant to purchase properties in disaster-prone regions, leading to a decrease in price.
           </p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             <a href="/impact/housing_pricing">Learn More</a>
