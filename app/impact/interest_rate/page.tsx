@@ -39,10 +39,18 @@ const PropertyValuesPage: React.FC = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Impact on Interest Rates from Natural Disasters</h1>
-            <canvas ref={canvasRef} id="myChart" width="600" ></canvas>
+        <div className="flex justify-center items-center h-screen">
+        <div className="text-center">
+            <h1 className="text-6xl font-bold mb-8" style={{ fontFamily: 'Futura' }}>Interest Rate</h1>
+            <div className="flex justify-center">
+                <canvas ref={canvasRef} id="myChart" width="600"></canvas>
+            </div>
+            <div className="bg-gray-800 p-8 rounded-lg" style={{ width: '600px' }}>
+                <p style={{ fontFamily: 'Futura' }} className="text-center">As shown by the chart, there was an increase in the interest rates following 2005, the time of Hurricane Katrina. After natural disasters, especially those as costly as Hurricane Katrina, more people, companies, and businesses need to borrow and take loans from the banks to help rebuild what the disaster destroyed. In addition to a higher risk for compensating a loan, banks will increase their interest rates to ensure making more profit.
+</p>
+            </div>
         </div>
+    </div>
     );
 };
 
