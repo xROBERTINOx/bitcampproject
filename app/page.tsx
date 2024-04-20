@@ -22,7 +22,7 @@ export default function Home() {
             Properties located in areas prone to frequent disasters may experience lower market values and higher insurance costs.
           </p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a href="/impact/property_values">Learn More</a>
+            <a href="/impact/interest_rate">Learn More</a>
           </button>
         </div>
 
@@ -35,6 +35,9 @@ export default function Home() {
             The occurrence of natural disasters can affect housing demand in affected areas. 
             Some homebuyers may be hesitant to purchase properties in disaster-prone regions, leading to a decrease in demand.
           </p>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href="/impact/housing_pricing">Learn More</a>
+          </button>
         </div>
       </div>
       
