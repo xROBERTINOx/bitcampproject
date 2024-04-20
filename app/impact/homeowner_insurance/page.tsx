@@ -1,12 +1,14 @@
 'use client';
 import React, { useRef, useEffect } from 'react';
 import Chart from 'chart.js/auto';
-import { labelsArrayHousingPrices } from './labelsArrayHousingPricing';
-import { dataHousingPrices } from './dataHousingPricing';
+import { labelsInsurance } from './labelsInsurance';
+import { dataInsurance } from './dataInsurance';
+
 
 let chartInstance = null;
 
-const Housing_Pricing: React.FC = () => {
+
+const Homeowner_insurance: React.FC = () => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -14,13 +16,13 @@ const Housing_Pricing: React.FC = () => {
         if (canvas && !chartInstance) {
             // Create a new Chart instance only if it doesn't exist
             chartInstance = new Chart(canvas, {
-                type: 'scatter',
+                type: 'line',
                 data: {
-                    labels: labelsArrayHousingPrices,
+                    labels: labelsInsurance,
                     datasets: [
                         {
-                            label: 'index nsa',
-                            data: dataHousingPrices,
+                            label: 'Home Owner Insurance Price',
+                            data: dataInsurance,
                             borderWidth: 1,
                         },
                     ],
@@ -41,10 +43,11 @@ const Housing_Pricing: React.FC = () => {
 
     return (
         <div>
-            <h1>Impact on index NSA from Natural Disasters</h1>
+            <h1>Impact on Home Owner Insurance price from Hurricane Katrina</h1>
             <canvas ref={canvasRef} id="myChart" width="600" ></canvas>
         </div>
     );
+
 };
 
-export default Housing_Pricing;
+export default Homeowner_insurance;

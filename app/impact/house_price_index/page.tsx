@@ -1,14 +1,12 @@
 'use client';
 import React, { useRef, useEffect } from 'react';
 import Chart from 'chart.js/auto';
-import { labelsArray } from './labelsArray';
-import { data } from './data';
 import { labelsArrayHousingPrices } from './labelsArrayHousingPricing';
 import { dataHousingPrices } from './dataHousingPricing';
 
-let chartInstance = null; // Declare a variable to store the Chart instance
+let chartInstance = null;
 
-const PropertyValuesPage: React.FC = () => {
+const House_price_index: React.FC = () => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -18,14 +16,14 @@ const PropertyValuesPage: React.FC = () => {
             chartInstance = new Chart(canvas, {
                 type: 'scatter',
                 data: {
-                    labels: labelsArray,
+                    labels: labelsArrayHousingPrices,
                     datasets: [
                         {
-                            label: '% interest rate',
-                            data: data,
+                            label: 'US House Price Index',
+                            data: dataHousingPrices,
                             borderWidth: 1,
                         },
-                    ],//here
+                    ],
                 },
                 options: {
                     scales: {
@@ -40,12 +38,13 @@ const PropertyValuesPage: React.FC = () => {
         }
     }, []);
 
+
     return (
         <div>
-            <h1>Impact on Interest Rates from Natural Disasters</h1>
+            <h1>Impact on US House Price Index from Natural Disasters</h1>
             <canvas ref={canvasRef} id="myChart" width="600" ></canvas>
         </div>
     );
 };
 
-export default PropertyValuesPage;
+export default House_price_index;

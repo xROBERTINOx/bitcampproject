@@ -4,12 +4,11 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24" style={{ fontFamily: "Poppins, Arial, sans-serif" }}>
       <h1 className="text-4xl font-bold mb-8">
-        Natural Disasters and the Housing Market
+        Natural Disasters and the Housing Market (Hurricane Katrina)
       </h1>
       
       <p className="text-lg mb-8">
-        Welcome to our website! Here, we explore the relationship between natural disasters and the housing market. 
-        We analyze how different types of natural disasters impact property values, housing demand, and insurance rates.
+        Welcome to our website! Here, we explore the relationship between natural disasters and the housing market following Hurricane Katrina. 
       </p>
       
       <div className="grid grid-cols-2 gap-8">
@@ -29,18 +28,31 @@ export default function Home() {
         
         <div className="bg-gray-800 p-8 rounded-lg">
           <h2 className="text-2xl font-semibold mb-4">
-            Housing Pricing
+            US House Price Index
           </h2>
           <p>
-            The occurrence of natural disasters can affect housing price changes in affected areas. 
-            Some homebuyers may be hesitant to purchase properties in disaster-prone regions, leading to a decrease in price.
+          The US House Price Index, as provided by the Federal Housing Finance Agency, measures changes in prices for residential houses, natural disasters can have have a toll on the change in house prices.
           </p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a href="/impact/housing_pricing">Learn More</a>
+            <a href="/impact/house_price_index">Learn More</a>
           </button>
         </div>
+
+        <div className="bg-gray-800 p-8 rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4">
+            Average Homeowners Insurance
+          </h2>
+          <p>
+            Because of the speculations of Hurricane Katrina, a year before the hurricane hit, the insurance rates spiked up and then dropped after the hurricane.
+          </p>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href="/impact/homeowner_insurance">Learn More</a>
+          </button>
+        </div>
+
+
       </div>
-      
+
       <div className="mt-8">
         <h2 className="text-2xl font-semibold mb-4">
           Explore Further
@@ -58,15 +70,6 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          By{" "}
-          <Image
-            src="/vercel.svg"
-            alt="Vercel Logo"
-            className="dark:invert"
-            width={100}
-            height={24}
-            priority
-          />
         </a>
       </div>
     </main>
