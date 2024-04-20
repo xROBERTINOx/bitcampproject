@@ -1,14 +1,13 @@
 'use client';
 import React, { useRef, useEffect } from 'react';
 import Chart from 'chart.js/auto';
-import { labelsArray } from './labelsArray';
-import { data } from './data';
+import { labelsUnemployment } from './labelsUnemployment';
+import { dataUnemployment } from './dataUnemployment';
 
 let chartInstance = null; // Declare a variable to store the Chart instance
 
-const PropertyValuesPage: React.FC = () => {
+const Unemployment: React.FC = () => {
     const canvasRef = useRef(null);
-
     useEffect(() => {
         const canvas = canvasRef.current;
         if (canvas && !chartInstance) {
@@ -16,11 +15,11 @@ const PropertyValuesPage: React.FC = () => {
             chartInstance = new Chart(canvas, {
                 type: 'scatter',
                 data: {
-                    labels: labelsArray,
+                    labels: labelsUnemployment,
                     datasets: [
                         {
-                            label: '% interest rate',
-                            data: data,
+                            label: '% unemployment',
+                            data: dataUnemployment,
                             borderWidth: 1,
                         },
                     ],//here
@@ -40,10 +39,11 @@ const PropertyValuesPage: React.FC = () => {
 
     return (
         <div>
-            <h1>Impact on Interest Rates from Natural Disasters</h1>
+            <h1>Unemployment</h1>
             <canvas ref={canvasRef} id="myChart" width="600" ></canvas>
         </div>
     );
+
 };
 
-export default PropertyValuesPage;
+export default Unemployment;

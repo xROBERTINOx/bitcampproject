@@ -37,6 +37,18 @@ export default function Home() {
           </button>
         </div>
 
+        <div className="bg-gray-800 p-8 rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4">
+            Unemployment Rate
+          </h2>
+          <p>
+            Because of all the damage done to the city, the unemployment rate spiked up after the hurricane hit.
+          </p>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href="/impact/unemployment_rate">Learn More</a>
+          </button>
+        </div>
+
 
       </div>
 
