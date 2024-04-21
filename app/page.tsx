@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 export default function Home() {
@@ -50,7 +51,6 @@ export default function Home() {
         </div>
 
 
-
         <div className="bg-gray-800 p-8 rounded-lg">
         <h2 className="text-2xl font-semibold mb-4">
           Explore Further
@@ -60,6 +60,18 @@ export default function Home() {
         </p>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           <a href="/resources">Resources</a>
+        </button>
+      </div>
+
+      <div className="bg-gray-800 p-8 rounded-lg">
+        <h2 className="text-2xl font-semibold mb-4">
+          Mini game
+        </h2>
+        <p>
+          Play a little mini game in which you try to move away from the tornado!
+        </p>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <a href="/game">Move your cursor around!</a>
         </button>
       </div>
 
