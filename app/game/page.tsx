@@ -6,7 +6,7 @@ const CursorFollower = () => {
   const squareRef = useRef(null);
   const squareRef2 = useRef(null);
   const [isTouching, setIsTouching] = useState(false);
-  const [count, setCount] = useState(-1);
+  const [count, setCount] = useState(0);
 
   const isOverlapping = (rectA, rectB) => {
     return (
@@ -37,7 +37,12 @@ const CursorFollower = () => {
         if (isOverlapped && !isTouching) {
           console.log('Squares are touching!');
           setIsTouching(true);
-          setCount(count + 1);
+          const rand = Math.floor(Math.random()*9+1);
+          if (count + rand >= 50) {
+            alert("You have lost your job! Click to restart");
+            window.location.reload();
+          }
+          setCount(count + rand);
         } else if (!isOverlapped && isTouching) {
           console.log('Squares are not touching anymore!');
           setIsTouching(false);
@@ -54,8 +59,8 @@ const CursorFollower = () => {
 
   return (
     <div>
-    
-        <h1>Count: {count}</h1>
+        <h1> Game ends when 50 people lose their job!</h1>
+        <h1>Peope who have lost their jobs: {count}</h1>
       <div
         ref={squareRef}
         id="square"
@@ -64,7 +69,7 @@ const CursorFollower = () => {
           height: '50px',
           backgroundColor: 'red',
           position: 'absolute',
-          transition: 'left 0.4s ease, top 0.4s ease',
+          transition: 'left 0.2s ease, top 0.2s ease',
         }}
       ></div>
       <div
