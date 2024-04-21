@@ -11,6 +11,7 @@ const CursorFollower = () => {
   const [lost, setLost] = useState(false);
   const [needToShowStartButton, setNeedToShowStartButton] = useState(true);
   const [seconds, setSeconds] = useState(0);
+  const [lastestSeconds, setLastestSeconds] = useState(0);
 
 useEffect(() => {
     const interval = setInterval(() => {
@@ -54,6 +55,7 @@ useEffect(() => {
           const rand = Math.floor(Math.random()*9+1);
           if (count + rand >= 50) {
             setLost(true);
+            setLastestSeconds(seconds);
             setNeedToShowStartButton(true);
             setWantsToPlay(false);
           }
@@ -88,6 +90,8 @@ return (
             <div className="mr-4">
                 <h1 className="text-6xl font-bold mt-8" style={{ fontFamily: 'Futura' }}>
                     You Lost
+                    <br></br>
+                    You lasted {lastestSeconds} seconds
                 </h1>
             </div>
         )}
