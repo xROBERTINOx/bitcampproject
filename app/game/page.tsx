@@ -83,18 +83,16 @@ useEffect(() => {
   }
 
 return (
-    <div className="flex justify-center items-center">
+    <div className="flex flex-col justify-center items-center">
         {lost && (
-            <div className="">
-                <h1 className="text-6xl font-bold mt-8" style={{ fontFamily: 'Futura', display: 'inline-block',
-  verticalAlign: 'middle',
- }}>
-                    You Lost <br></br>
+            <div className="mr-4">
+                <h1 className="text-6xl font-bold mt-8" style={{ fontFamily: 'Futura' }}>
+                    You Lost
                 </h1>
             </div>
         )}
         {needToShowStartButton && (
-            <div className="">
+            <div className="text-2xl font-bold flex justify-center items-center mt-8">
                 <button onClick={handleStartButton} style={{ fontFamily: 'Futura', display: 'inline-block',
   verticalAlign: 'middle',
 }}>Click me to start</button>
