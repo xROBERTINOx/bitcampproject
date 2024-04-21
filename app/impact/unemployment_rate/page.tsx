@@ -44,9 +44,15 @@ const Unemployment: React.FC = () => {
                 <div className="flex justify-center">
                     <canvas ref={canvasRef} id="myChart" width="600"></canvas>
                 </div>
+                <br></br>
                 <div className="bg-gray-800 p-8 rounded-lg" style={{ width: '600px' }}>
                     <p style={{ fontFamily: 'Futura' }} className="text-center">As represented by the chart, unemployment rates for Louisiana doubled in 2005, the time directly after Hurricane Katrina. When the number of people currently receiving income deteriorates, so does the number of people who can buy a home or pay off their mortgage.</p>
                 </div>
+                <br></br>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <a href="/">Back Home</a>
+                </button>
+
             </div>
         </div>
     );

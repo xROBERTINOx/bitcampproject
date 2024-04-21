@@ -48,9 +48,15 @@ const Homeowner_insurance: React.FC = () => {
                 <div className="flex justify-center">
                     <canvas ref={canvasRef} id="myChart" width="600"></canvas>
                 </div>
+                <br></br>
                 <div className="bg-gray-800 p-8 rounded-lg" style={{ width: '600px', marginLeft: '85px' }}>
                     <p style={{ fontFamily: 'Futura' }} className="text-center">The given graph shows the correlation between the cost of average homeowners insurance annual premiums and the year in which that was the average. Just before 2005, there was a spike in the cost of the premiums, in reference to the price before and after. Insurance costs rise due to the escalation of the possible cost that insurance companies would need to pay post-natural disaster. However, this goes against the time immediately after the hurricane because of the decrease in the likelihood that people would be able to pay off the premiums, especially after an event that would cause many people to lose a lot of assets.</p>
                 </div>
+                <br></br>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <a href="/">Back Home</a>
+                </button>
+
             </div>
         </div>
     );

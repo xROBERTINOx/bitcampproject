@@ -79,8 +79,41 @@ const ResourcesPage: React.FC = () => {
                         <a href="https://www.ncdc.noaa.gov/cdo-web/webservices/v2" target="_blank" rel="noopener noreferrer">Learn More</a>
                     </button>
             </div>
+        </div>
+<br></br>
+        <div>
+            <h1 className="text-2xl font-bold mb-8" style={{ fontFamily: 'Futura' }}>
+                Economic Data
+            </h1>
+        </div>
+
+        <div className="grid grid-cols-2 gap-8">
+
+        <div className="bg-gray-800 p-8 rounded-lg">
+                <h2 className="text-2xl font-semibold mb-4" style={{ fontFamily: 'Futura' }}>
+                    FRED (Federal Reserve Economic Data)
+                </h2>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <a href="https://fred.stlouisfed.org/series/LAUR" target="_blank" rel="noopener noreferrer">Learn More</a>
+                </button>
+            </div>
+            
+            <div className="bg-gray-800 p-8 rounded-lg">
+                <h2 className="text-2xl font-semibold mb-4" style={{ fontFamily: 'Futura' }}>
+                    Bankrate Mortgage rate history
+                </h2>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <a href="https://www.bankrate.com/mortgages/historical-mortgage-rates/#forecasting-mortgage-rates" target="_blank" rel="noopener noreferrer">Learn More</a>
+                </button>
+            </div>
+            
 
         </div>
+        <br></br>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <a href="/">Back Home</a>
+                </button>
+
 
     </main>
     );
