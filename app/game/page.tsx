@@ -92,10 +92,17 @@ return (
             </div>
         )}
         {needToShowStartButton && (
-            <div className="text-2xl font-bold flex justify-center items-center mt-8">
-                <button onClick={handleStartButton} style={{ fontFamily: 'Futura', display: 'inline-block',
-  verticalAlign: 'middle',
-}}>Click me to start</button>
+            <div>
+                <div className="text-2xl font-bold flex justify-center items-center mt-8">
+                    <button onClick={handleStartButton} style={{ fontFamily: 'Futura', display: 'inline-block',verticalAlign: 'middle',}}>
+                        Click me to start
+                    </button>
+                </div>
+                <div className="text-2xl font-bold flex justify-center items-center mt-8">
+                    <button className="" style={{ fontFamily: 'Futura', display: 'inline-block',verticalAlign: 'middle',}}>
+                        <a href="/">Click me to go home</a>
+                    </button>
+                </div>
             </div>
         )}
         {wantsToPlay && (
