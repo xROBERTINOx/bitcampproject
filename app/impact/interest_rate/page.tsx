@@ -56,6 +56,13 @@ const PropertyValuesPage: React.FC = () => {
                     <a href="/">Back</a>
                 </button>
             </div>
+            <div id="myModal" className="modal">
+                <div className="modal-content">
+                    <p>Are you sure you want to continue?</p>
+                    <button id="yesBtn">Yes</button>
+                    <button id="noBtn">No</button>
+                </div>
+            </div>
         </div>
     );
 };
