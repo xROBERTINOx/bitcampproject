@@ -10,8 +10,7 @@ const CursorFollower = () => {
   const [wantsToPlay, setWantsToPlay] = useState(false);
   const [lost, setLost] = useState(false);
   const [needToShowStartButton, setNeedToShowStartButton] = useState(true);
- 
-const [seconds, setSeconds] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
 useEffect(() => {
     const interval = setInterval(() => {
@@ -54,11 +53,15 @@ useEffect(() => {
           setIsTouching(true);
           const rand = Math.floor(Math.random()*9+1);
           if (count + rand >= 50) {
+            setCount(0);
+            setSeconds(0);
             setLost(true);
             setNeedToShowStartButton(true);
             setWantsToPlay(false);
           }
-          setCount(count + rand);
+          else if (count + rand < 50) {
+            setCount(count + rand);
+          }
         } else if (!isOverlapped && isTouching) {
           console.log('Squares are not touching anymore!');
           setIsTouching(false);
@@ -76,6 +79,7 @@ useEffect(() => {
   const handleStartButton = () => {
     setNeedToShowStartButton(false);
     setWantsToPlay(true);
+    setLost(false);
   }
 
 return (
