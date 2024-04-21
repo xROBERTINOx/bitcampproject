@@ -53,8 +53,6 @@ useEffect(() => {
           setIsTouching(true);
           const rand = Math.floor(Math.random()*9+1);
           if (count + rand >= 50) {
-            setCount(0);
-            setSeconds(0);
             setLost(true);
             setNeedToShowStartButton(true);
             setWantsToPlay(false);
@@ -77,6 +75,8 @@ useEffect(() => {
   }, [isTouching]);
 
   const handleStartButton = () => {
+    setCount(0);
+    setSeconds(0);
     setNeedToShowStartButton(false);
     setWantsToPlay(true);
     setLost(false);
@@ -86,14 +86,18 @@ return (
     <div className="flex justify-center items-center">
         {lost && (
             <div className="">
-                <h1 className=" flex justify-center items-center h-screen text-6xl font-bold mb-8" style={{ fontFamily: 'Futura' }}>
+                <h1 className="text-6xl font-bold mt-8" style={{ fontFamily: 'Futura', display: 'inline-block',
+  verticalAlign: 'middle',
+ }}>
                     You Lost <br></br>
                 </h1>
             </div>
         )}
         {needToShowStartButton && (
             <div className="">
-                <button onClick={handleStartButton}>Click me to start</button>
+                <button onClick={handleStartButton} style={{ fontFamily: 'Futura', display: 'inline-block',
+  verticalAlign: 'middle',
+}}>Click me to start</button>
             </div>
         )}
         {wantsToPlay && (
